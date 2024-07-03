@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://sahilkh9087:sahil1997@cluster0.f8ziakl.mongodb.net/leodora').then(() => console.log('db connected'))
+mongoose.connect('mongodb://localhost:27017/loedora').then(() => console.log('db connected'))
 
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true },
